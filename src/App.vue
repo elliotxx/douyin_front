@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    
+    <!-- 导航栏 -->
+    <header>
+      抖音精灵
+    </header>
+
+    <!-- 单页路由 -->
     <router-view/>
   </div>
 </template>

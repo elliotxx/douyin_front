@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -17,5 +17,11 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+## TODO
+
+- [ ] 解析视频时的加载图标
+- [ ] 清除按钮
+- [ ] 解析完用 DPlayer 播放视频
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

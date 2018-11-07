@@ -1,15 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import home from '@/components/home'
+import downloadVideo from '@/components/downloadVideo'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      name: 'home',
+      component: home
+    },
+    {
+        path: "/downloadVideo",
+        name: "downloadVideo",
+        component: downloadVideo
+    },
   ]
 })
