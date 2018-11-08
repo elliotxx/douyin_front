@@ -9,7 +9,10 @@
             <el-input v-model="shortUrlText" placeholder="请输入视频短链接" style="width: 40%;margin-top: 100px;"></el-input>
             <el-button type="primary" @click="onSubmit">解析</el-button>
             
+            <div id="dplayer" rel="noreferrer"></div>
+            
             <el-card v-if="downloadUrl != ''" style="margin: 0 auto; width:40%;margin-top: 10px;">
+
                 <a :href="downloadUrl" rel="noreferrer">
                     <el-button type="primary" class="button">下载短视频</el-button>
                 </a>
@@ -20,6 +23,9 @@
 </template>
 
 <script>
+import DPlayer from 'dplayer/dist/DPlayer.min.js'
+import 'dplayer/dist/DPlayer.min.css'
+
 export default {
   name: "upload",
   data() {
@@ -67,6 +73,21 @@ export default {
 
           // 结束 loading
           this.isloading = false;
+
+            var player = new DPlayer({
+                    "container":document.getElementById("dplayer"), // 对应 div 中的 id
+                    "preload":"none",
+                    "video":{   // 视频配置
+                        "url": this.downloadUrl // 把 OSS 中上传视频得到链接放到这儿
+                    },
+                    // danmaku:{   // 弹幕配置
+                    //     id:"demo",     //本视频弹幕的唯一标识
+                    //     api:"https://api.diygod.me/dplayer/"
+                    // }
+                });
+                window.dplayers||(window.dplayers=[]);
+                window.dplayers.push(player);
+
           return;
         })
         .catch(resp => {
