@@ -1,5 +1,5 @@
 <template>
-    <el-container>
+    <el-container style="text-align: center;">
 
         <el-header>
             该网站提供抖音的web端辅助功能，帮助抖音用户更方便的使用抖音！
@@ -35,7 +35,7 @@
             </router-link>
         </el-main>
 
-        <el-footer style="position:absolute; bottom:0px; left:43%; ">
+        <el-footer style="position: absolute; bottom:0px; width: 250px; left:50%; margin-left:-125px;">
             备案号：鲁ICP备17002520号
         </el-footer>
 
