@@ -6,7 +6,7 @@
         </el-header> -->
 
         <el-main v-loading="isloading" :element-loading-text="loading_text">
-            <el-input v-model="shortUrlText" placeholder="请输入视频短链接" style="width: 40%;margin-top: 100px;"></el-input>
+            <el-input @keyup.enter.native="onSubmit" v-model="shortUrlText" placeholder="请输入视频短链接" style="width: 40%;margin-top: 100px;"></el-input>
             <el-button type="primary" @click="onSubmit">解析</el-button>
             
             <!-- <div id="dplayer" rel="noreferrer"></div> -->
@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import DPlayer from "dplayer/dist/DPlayer.min.js";
-import "dplayer/dist/DPlayer.min.css";
+// import DPlayer from "dplayer/dist/DPlayer.min.js";
+// import "dplayer/dist/DPlayer.min.css";
 
 export default {
     name: "upload",

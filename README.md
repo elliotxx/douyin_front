@@ -20,8 +20,16 @@ npm run build --report
 
 ## TODO
 
-- [ ] 解析视频时的加载图标
-- [ ] 清除按钮
+- [x] 解析视频时的加载图标
+- [x] 清除按钮
 - [ ] 解析完用 DPlayer 播放视频
+- [ ] 抖音用户信息查询
+- [ ] 抖音老视频博物馆
+- [ ] 指定用户收藏的 bgm 批量下载
+- [ ] 指定用户作品批量下载
+- [ ] 指定用户收藏的视频批量下载
+- [ ] 抖音高赞视频展览馆
+- [ ] 缓存抖音所有的视频链接和信息
+- [ ] 按钮改大一些
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

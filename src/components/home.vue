@@ -12,6 +12,12 @@
                 </el-tooltip>
             </router-link>
 
+            <router-link to="/userInfo" style="text-decoration: none; color: white; display: block; margin: 15px 0px;">
+                <el-tooltip class="item" effect="dark" content="获取指定抖音用户的信息" placement="right">
+                    <el-button type="primary" icon="el-icon-download">抖音用户信息查询</el-button>
+                </el-tooltip>
+            </router-link>
+
             <router-link to="/downloadVideo" style="text-decoration: none; color: white; display: block; margin: 15px 0px;">
                 <el-tooltip class="item" effect="dark" content="下载指定用户收藏的BGM" placement="right">
                     <el-button type="primary" icon="el-icon-download">BGM下载</el-button>
