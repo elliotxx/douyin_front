@@ -31,7 +31,7 @@
             </el-card>
             
             <!-- 源码展示页面 -->
-            <el-card v-if="isWatchJSON" style="margin: 0 auto; width:80%;margin-top: 10px;text-align: left;">
+            <el-card v-if="isWatchJSON" style="margin: 0 auto; width:40%;margin-top: 10px;text-align: left;">
                 <pre>{{ userJSON }}</pre>
             </el-card>
 
