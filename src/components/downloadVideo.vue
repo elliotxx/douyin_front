@@ -1,12 +1,12 @@
 <template>
     <el-container>
 
-        <!-- <el-header>
-            下载指定短链接的抖音视频
-        </el-header> -->
+        <el-header>
+            下载指定短链接的无水印抖音视频
+        </el-header>
 
         <el-main v-loading="isloading" :element-loading-text="loading_text">
-            <el-input @keyup.enter.native="onSubmit" v-model="shortUrlText" placeholder="请输入视频短链接" style="width: 40%;margin-top: 100px;"></el-input>
+            <el-input class="searchBar" @keyup.enter.native="onSubmit" v-model="shortUrlText" placeholder="请输入视频短链接"></el-input>
             <el-button type="primary" @click="onSubmit">解析</el-button>
             
             <!-- <div id="dplayer" rel="noreferrer"></div> -->
@@ -118,4 +118,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.el-container {
+    text-align: center;
+}
+.el-header {
+    padding: 10px;
+}
+.searchBar {
+    width: 40%;margin-top: 50px;
+}
 </style>

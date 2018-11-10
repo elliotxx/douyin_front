@@ -1,12 +1,12 @@
 <template>
     <el-container>
 
-        <!-- <el-header>
-            下载指定短链接的抖音视频
-        </el-header> -->
+        <el-header>
+            输入指定抖音号或者昵称，获取该用户的详细信息
+        </el-header>
 
         <el-main v-loading="isloading" :element-loading-text="loading_text">
-            <el-input @keyup.enter.native="onSubmit" v-model="shortID" placeholder="请输入抖音号或昵称（用抖音号搜索更准确呦，昵称默认显示第一个搜索结果）" style="width: 40%;margin-top: 50px;"></el-input>
+            <el-input class="searchBar" @keyup.enter.native="onSubmit" v-model="shortID" placeholder="请输入抖音号或昵称（用抖音号搜索更准确呦，昵称默认显示第一个搜索结果）"></el-input>
             <el-button type="primary" @click="onSubmit">搜索</el-button>
             
             <el-card v-if="userInfo != ''" style="margin: 0 auto; width:40%;margin-top: 10px;">
@@ -185,6 +185,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.el-container {
+    text-align: center;
+}
+.el-header {
+    padding: 10px;
+}
+.searchBar {
+    width: 40%;margin-top: 50px;
+}
 .clearfix:before,
 .clearfix:after {
     display: table;
