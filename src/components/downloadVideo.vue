@@ -33,7 +33,7 @@ export default {
         return {
             shortUrlText: "",
             downloadUrl: "",
-            host: "http://localhost:8000",
+            host: "http://douyin.yangyingming.com:8005",
             isloading: false,
             loading_text: "解析短链接文本中……"
         };
