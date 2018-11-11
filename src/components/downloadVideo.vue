@@ -28,7 +28,7 @@
 // import "dplayer/dist/DPlayer.min.css";
 
 export default {
-    name: "upload",
+    name: "downloadVideo",
     data() {
         return {
             shortUrlText: "",
@@ -125,6 +125,7 @@ export default {
     padding: 10px;
 }
 .searchBar {
-    width: 40%;margin-top: 50px;
+    width: 40%;
+    margin-top: 50px;
 }
 </style>

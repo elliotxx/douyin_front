@@ -41,7 +41,7 @@
 
 <script>
 export default {
-    name: "upload",
+    name: "userInfo",
     data() {
         return {
             shortID: "",
@@ -192,7 +192,8 @@ export default {
     padding: 10px;
 }
 .searchBar {
-    width: 40%;margin-top: 50px;
+    width: 40%;
+    margin-top: 50px;
 }
 .clearfix:before,
 .clearfix:after {
