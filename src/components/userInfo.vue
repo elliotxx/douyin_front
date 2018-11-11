@@ -27,7 +27,7 @@
                 </el-table-column>
                 </el-table>
                 <!-- 查看源码按钮 -->
-                <el-button type="primary" class="button" @click="watchJSON" style="margin-top: 20px;">查看源码</el-button>
+                <el-button type="success" class="button" @click="watchJSON" style="margin-top: 20px;">查看源码</el-button>
             </el-card>
             
             <!-- 源码展示页面 -->
@@ -47,7 +47,6 @@ export default {
             shortID: "",
             userJSON: "",
             userInfo: "",
-            host: "http://douyin.yangyingming.com:8005",
             isloading: false,
             loading_text: "努力搜索该抖音号中……",
             isWatchJSON: false

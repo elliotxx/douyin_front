@@ -11,12 +11,19 @@
             
             <!-- <div id="dplayer" rel="noreferrer"></div> -->
             
+            <!-- 展示解析结果 -->
             <el-card v-if="downloadUrl != ''" style="margin: 0 auto; width:40%;margin-top: 10px;">
 
                 <a :href="downloadUrl" rel="noreferrer" target="_blank">
                     <el-button type="primary" class="button" icon="el-icon-download">下载短视频</el-button>
                 </a>
-                <el-button type="warning" class="button" @click="clean">清除</el-button>
+                <el-button type="success" class="button" @click="watchLink">查看下载链接</el-button>
+                <el-button type="warning" class="button" @click="clean" style="margin:0px">清除</el-button>
+            </el-card>
+
+            <!-- 展示下载链接容器 -->
+            <el-card v-if="isWatchLink && downloadUrl !=''" style="margin: 0 auto; width:40%;margin-top: 10px;text-align: left;">
+                <pre><a :href="downloadUrl">{{ downloadUrl }}</a></pre>
             </el-card>
 
         </el-main>
@@ -33,9 +40,9 @@ export default {
         return {
             shortUrlText: "",
             downloadUrl: "",
-            host: "http://douyin.yangyingming.com:8005",
             isloading: false,
-            loading_text: "解析短链接文本中……"
+            loading_text: "解析短链接文本中……",
+            isWatchLink: false
         };
     },
     mounted() {
@@ -46,6 +53,8 @@ export default {
         onSubmit() {
             // 开始 loading
             this.isloading = true;
+            this.isWatchLink = false;
+            this.downloadUrl = "";
             console.log(this.isloading);
             // 解析视频短链接地址的抖音视频下载地址
             var shortUrlText = this.shortUrlText;
@@ -67,7 +76,12 @@ export default {
             // 根据短链接请求 API 获取下载地址
             this.loading_text = "正在解析短视频地址……";
             this.$axios
-                .get(this.host + "/api/v1/downloadvideo/" + "?url=" + shortUrl)
+                .get(
+                    this.douyinhost +
+                        "/api/v1/downloadvideo/" +
+                        "?url=" +
+                        shortUrl
+                )
                 .then(resp => {
                     // 获取下载链接
                     console.log(resp.data);
@@ -110,6 +124,10 @@ export default {
         clean() {
             // 清除下载链接
             this.downloadUrl = "";
+        },
+        watchLink() {
+            // 是否查看源码
+            this.isWatchLink = !this.isWatchLink;
         }
     }
 };
@@ -127,5 +145,27 @@ export default {
 .searchBar {
     width: 40%;
     margin-top: 50px;
+}
+/* pre 内容自动换行 */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Merriweather, 冬青黑体简体中文, "Microsoft YaHei", 微软雅黑,
+        SimSun, 宋体, Heiti, 黑体, droid_sansregular, arial, serif;
+    margin: 5px;
+}
+a:link,
+a:visited,
+a:hover {
+    text-decoration: none;
+    word-break: break-all;
+}
+a:link,
+a:visited {
+    color: #e6a23c;
+}
+a:hover {
+    background-color: #e6a23c;
+    color: white;
 }
 </style>
