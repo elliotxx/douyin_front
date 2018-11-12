@@ -23,24 +23,6 @@
                     <el-button class="home_button" type="primary" icon="el-icon-download">用户作品批量下载</el-button>
                 </el-tooltip>
             </router-link>
-
-            <router-link class="router_block" to="/downloadVideo" >
-                <el-tooltip effect="dark" content="下载指定用户收藏的BGM" placement="right">
-                    <el-button class="home_button" type="primary" icon="el-icon-download">BGM下载</el-button>
-                </el-tooltip>
-            </router-link>
-
-            <router-link class="router_block" to="/downloadVideo" >
-                <el-tooltip effect="dark" content="下载指定短链接的抖音视频" placement="right">
-                    <el-button class="home_button" type="primary" icon="el-icon-download">视频推荐</el-button>
-                </el-tooltip>
-            </router-link>
-
-            <router-link class="router_block" to="/downloadVideo" >
-                <el-tooltip effect="dark" content="下载指定短链接的抖音视频" placement="right">
-                    <el-button class="home_button" type="primary" icon="el-icon-download">视频下载</el-button>
-                </el-tooltip>
-            </router-link>
         </el-main>
 
         <el-footer style="position: absolute; bottom:0px; width: 250px; left:50%; margin-left:-125px;">

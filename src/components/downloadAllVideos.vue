@@ -192,7 +192,6 @@ export default {
 }
 .searchBar {
     width: 40%;
-    margin-top: 50px;
 }
 .clearfix:before,
 .clearfix:after {

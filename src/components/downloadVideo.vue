@@ -144,7 +144,6 @@ export default {
 }
 .searchBar {
     width: 40%;
-    margin-top: 50px;
 }
 /* pre 内容自动换行 */
 pre {
