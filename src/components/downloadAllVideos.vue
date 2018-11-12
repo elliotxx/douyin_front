@@ -2,7 +2,7 @@
     <el-container>
 
         <el-header>
-            输入指定抖音号或者昵称，获取该用户的详细信息
+            批量下载指定用户的所有作品
         </el-header>
 
         <el-main v-loading="isloading" :element-loading-text="loading_text">
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-    name: "userInfo",
+    name: "downloadAllVideos",
     data() {
         return {
             shortID: "",
@@ -65,7 +65,7 @@ export default {
             // 根据短链接请求 API 获取下载地址
             this.$axios
                 .get(
-                    this.douyinhost + "/api/v1/userinfo/" + "?shortid=" + this.shortID
+                    this.douyinhost + "/api/v1/downloadallvideos/" + "?shortid=" + this.shortID
                 )
                 .then(resp => {
                     // 获取用户信息

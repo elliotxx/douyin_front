@@ -18,9 +18,9 @@
                 </el-tooltip>
             </router-link>
 
-            <router-link class="router_block" to="/downloadVideo">
+            <router-link class="router_block" to="/downloadAllVideos">
                 <el-tooltip effect="dark" content="批量下载指定用户的所有作品" placement="right">
-                    <el-button class="home_button" type="primary" icon="el-icon-download">用户作品下载</el-button>
+                    <el-button class="home_button" type="primary" icon="el-icon-download">用户作品批量下载</el-button>
                 </el-tooltip>
             </router-link>
 
@@ -69,15 +69,15 @@ export default {
     padding: 10px;
 }
 .router_block {
-    display: block; 
-    margin: 15px auto; 
-    width: 180px;
+    display: block;
+    margin: 15px auto;
+    width: 200px;
     height: 60px;
 }
 .home_button {
     width: 100%;
     height: 100%;
-    font-size: 17px;
+    font-size: 16px;
     border-radius: 10px;
 }
 </style>

@@ -14,8 +14,7 @@ import axios from "axios";
 Vue.use(ElementUI);
 Vue.prototype.$axios = axios;
 
-Vue.prototype.douyinhost = "http://douyin.yangyingming.com:8005";
-// Vue.prototype.douyinhost = "http://localhost:8005";
+Vue.prototype.douyinhost = "http://localhost:8005";
 
 Vue.config.productionTip = false;
 

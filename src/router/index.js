@@ -3,6 +3,7 @@ import Router from "vue-router";
 import home from "@/components/home";
 import downloadVideo from "@/components/downloadVideo";
 import userInfo from "@/components/userInfo";
+import downloadAllVideos from "@/components/downloadAllVideos";
 
 Vue.use(Router);
 
@@ -23,6 +24,11 @@ export default new Router({
       path: "/userInfo",
       name: "userInfo",
       component: userInfo
+    },
+    {
+      path: "/downloadAllVideos",
+      name: "downloadAllVideos",
+      component: downloadAllVideos
     }
   ]
 });
