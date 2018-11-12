@@ -8,19 +8,19 @@
         <el-main>
             <router-link class="router_block" to="/downloadVideo">
                 <el-tooltip effect="dark" content="下载指定短链接的无水印抖音视频" placement="right">
-                    <el-button class="home_button" type="primary" icon="el-icon-download">视频下载</el-button>
+                    <el-button class="home_button" type="primary" icon="el-icon-download">无水印视频下载</el-button>
                 </el-tooltip>
             </router-link>
 
             <router-link class="router_block" to="/userInfo" >
                 <el-tooltip effect="dark" content="获取指定抖音用户的信息" placement="right">
-                    <el-button class="home_button" type="primary" icon="el-icon-search">用户信息查询</el-button>
+                    <el-button class="home_button" type="primary" icon="el-icon-search">用户信息查询(施工中)</el-button>
                 </el-tooltip>
             </router-link>
 
             <router-link class="router_block" to="/downloadAllVideos">
                 <el-tooltip effect="dark" content="批量下载指定用户的所有作品" placement="right">
-                    <el-button class="home_button" type="primary" icon="el-icon-download">用户作品批量下载</el-button>
+                    <el-button class="home_button" type="primary" icon="el-icon-download">用户作品批量下载(施工中)</el-button>
                 </el-tooltip>
             </router-link>
         </el-main>
@@ -53,7 +53,7 @@ export default {
 .router_block {
     display: block;
     margin: 15px auto;
-    width: 200px;
+    width: 240px;
     height: 60px;
 }
 .home_button {
