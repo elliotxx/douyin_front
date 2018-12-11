@@ -22,7 +22,7 @@ npm install
 # build for production with minification
 npm run build
 ```
-3. 最后 build/ 目录中的便是打包好的静态网站了，可以使用 nginx 等服务器指向该目录。
+3. 最后 dist/ 目录中的便是打包好的静态网站了，可以使用 nginx 等服务器指向该目录。
 
 ## 使用 Docker
 1. 首先修改 src/main.js line 17 的后端请求地址，后端项目地址见：[elliotxx/douyin_back](https://github.com/elliotxx/douyin_back)
