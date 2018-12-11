@@ -9,23 +9,39 @@
 
 ![](./screenshots/2.png)
 
-## Build Setup
-
+## 安装 
+1. 首先修改 src/main.js line 17 的后端请求地址，后端项目地址见：[elliotxx/douyin_back](https://github.com/elliotxx/douyin_back)
+```
+Vue.prototype.douyinhost = "http://douyin.test.com:8005";
+```
+2. 然后安装依赖以及打包应用
 ```bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
+3. 最后 build/ 目录中的便是打包好的静态网站了，可以使用 nginx 等服务器指向该目录。
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 使用 Docker
+1. 首先修改 src/main.js line 17 的后端请求地址，后端项目地址见：[elliotxx/douyin_back](https://github.com/elliotxx/douyin_back)
+```
+Vue.prototype.douyinhost = "http://douyin.test.com:8005";
+```
+2. 然后构建容器
+```
+# 构建镜像
+docker build -t douyin_front .
+
+# 启动容器
+docker run --name douyin_front -p 8006:80 -d douyin_front
+
+# 查看运行中的容器
+docker container ls
+```
+3. 容器启动成功后，服务就可以通过 http://localhost:8006 进行访问。
+
 
 ## TODO
 
