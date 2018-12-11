@@ -40,7 +40,7 @@ docker run --name douyin_front -p 8006:80 -d douyin_front
 # 查看运行中的容器
 docker container ls
 ```
-3. 容器启动成功后，服务就可以通过 http://localhost:8006 进行访问。
+3. 如果容器正常启动，服务就可以通过 http://localhost:8006 进行访问。
 
 
 ## TODO
